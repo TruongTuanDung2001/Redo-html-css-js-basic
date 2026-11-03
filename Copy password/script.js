@@ -1,15 +1,24 @@
 const btnCreatePassword = document.querySelector(".button");
 const inputValePassword = document.getElementById("input");
 const copyIcon = document.querySelector(".fa-copy");
+const alert = document.querySelector(".alert-container");
 
+// event button create password
 btnCreatePassword.addEventListener("click", () => {
     createPassword();
 });
 
+// event icon copy (fa-copy)
 copyIcon.addEventListener("click", () => {
     copyPassword();
+    if(!inputValePassword.value) return;
+    alert.classList.remove('active');
+    setTimeout(() => {
+        alert.classList.add('active');
+    }, 2000);
 });
 
+// create password
 function createPassword(){
     const chars = "0123456789abcdefghijklmnopqrstuvwxtz!@#$%^&*()_+?:{}[]ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const passwordLength = 14;
@@ -36,10 +45,13 @@ function createPassword(){
     inputValePassword.value = password;
 }
 
+// copy password
 function copyPassword(){
     console.log(inputValePassword.value);
     inputValePassword.select(); // là bấm xong thì nó sẽ bô xanh vùng dữ liệu
     inputValePassword.setSelectionRange(0, 9999); // dùng cho thiết bị di động
 
     navigator.clipboard.writeText(inputValePassword.value);
+
+    alert.innerHTML = inputValePassword.value + " copied"
 }
