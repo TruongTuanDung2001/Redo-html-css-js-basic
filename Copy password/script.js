@@ -1,5 +1,6 @@
 const btnCreatePassword = document.querySelector(".button");
 const inputValePassword = document.getElementById("input");
+const copyIcon = document.querySelector(".fa-copy");
 
 btnCreatePassword.addEventListener("click", () => {
     createPassword();
@@ -35,4 +36,10 @@ function createPassword(){
     inputValePassword.value = password;
 }
 
+function copyPassword(){
+    console.log(inputValePassword.value);
+    inputValePassword.select(); // là bấm xong thì nó sẽ bô xanh vùng dữ liệu
+    inputValePassword.setSelectionRange(0, 9999); // dùng cho thiết bị di động
 
+    navigator.clipboard.writeText(inputValePassword.value);
+}
