@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.calculator{
+    background-color: #f2f2f2;
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 100px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .4);
+}
+
+#result{
+    width: 100%;
+    padding: 10px;
+    font-size: 24px;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .4) inset;
+}
+
+/* buttons */
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* sử dụng  4 hàng bằng nhau*/
+    grid-gap: 10px;
+    margin-top: 20px;
+}
+
+button{
+    padding: 10px;
+    font-size: 24px;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+
+button:hover{
+    background-color: #ddd;
+}
+
+.clear{
+    background-color: #ff4136;
+    color: #fff;
+}
+
+.number, .decimal{
+    background-color: #fff;
+    color: #333;
+}
+
+.operator{
+    background-color: #0074d9;
+    color:#000;
+}
+
+.equals{
+    background: rgb(105, 200, 105);
+    grid-row: span 3;
+    /* mở rộng nút bằng chạy trên 3 hàng */
+}
