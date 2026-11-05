@@ -1,0 +1,39 @@
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input{
+    /* thuộc tính nút ẩn nút input checkbox */
+    visibility: hidden;
+}
+
+.lable{
+    width: 80px;
+    height: 40px;
+    background-color: lightgray;
+    position: absolute;
+    border-radius: 20px;
+    cursor: pointer;
+
+}
+
+/* height là 40px, nên h của circle là 34, dư ra 6 thì cho top 3px cách trên cách dưới là 6px là đủ */
+.lable .circle{
+    height: 34px;
+    width: 34px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+}
+
+/* khi input được check thì phần tử liền kề của nó là lable sẽ được style thuộc tính */
+.input:checked + .lable{
+    background-color: salmon;
+}
+
