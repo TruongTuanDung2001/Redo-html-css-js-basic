@@ -1,0 +1,103 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New';
+    background: salmon;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+img{
+    width: 70px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 60px;
+    z-index: 2;
+}
+
+.clock{
+    background-color: lightcyan;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 5px solid gray;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, .9);
+    position: relative;
+}
+
+.numbers div{
+    position: absolute;
+    font-size: 27px;
+    font-weight: bold;
+    color: lightgoldenrodyellow;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+    z-index: 3;
+}
+
+.twelve{
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.three{
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.six{
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nine{
+    left: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/*  */
+.arrows{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrows::before{
+    content: "";
+    width: 25px;
+    height: 25px;
+    background: goldenrod;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .6);
+    z-index: 4;
+}
+
+.arrows div{
+    background-color: brown;
+    width: 7px;
+    position: absolute;
+    height: 120px;
+    /* transform-origin để lấy vị trí trục để xoay, quan trọng, cái đít kim là bot nên để bot center để quay từ cái vòng tròn, muốn quay cái đầu thì dùng top :)) */
+    transform-origin: bottom center;
+    bottom: 50%;
+    z-index: 3;
+    border-radius: 50% 50% 0 0;
+}
+
+.arrows .hour{
+    height: 80px;
+    transform: rotate(50deg);
+}
+
+.arrows .second{
+    transform: rotate(250deg);
+    background-color: gold;
+}
