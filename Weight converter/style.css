@@ -19,6 +19,7 @@ body{
     border-radius: 6px;
     border: 1px solid #fff;
     padding: 20px;
+    height: 300px;
 }
 
 .converter h1{
@@ -55,4 +56,10 @@ body{
     padding: 20px;
     font-size: 22px;
     color: rgb(145, 228, 231);
+}
+
+.check{
+    color: red;
+    font-size: 22px;
+    display: none;
 }
