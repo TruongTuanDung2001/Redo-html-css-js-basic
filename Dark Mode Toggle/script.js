@@ -2,6 +2,8 @@ const ipCheckBox = document.getElementById("dark-mode");
 
 const body = document.querySelector("body");
 
+ipCheckBox.checked = JSON.parse(localStorage.getItem("mode"));
+updateBody();
  // sử dụng ipCheckBox.checked
  function updateBody(){
     if(ipCheckBox.checked){
@@ -12,4 +14,12 @@ const body = document.querySelector("body");
     }
  }
 
-ipCheckBox.addEventListener("input", updateBody);
+ipCheckBox.addEventListener("input", () => {
+    updateBody(), updateLocalStorage()
+});
+
+//save mode
+function updateLocalStorage(){
+    // lưu vào bộ nhớ local
+    localStorage.setItem("mode", JSON.stringify(ipCheckBox.checked));
+}
