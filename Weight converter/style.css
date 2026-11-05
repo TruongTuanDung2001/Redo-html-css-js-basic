@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+    min-height: 100vh;
+    background: linear-gradient(to left, rgb(33, 22, 33), rgb(12,55, 77));
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.converter{
+    background-color: lightslategrey;
+    border-radius: 6px;
+    border: 1px solid #fff;
+    padding: 20px;
+}
+
+.converter h1{
+    font-size: 40px;
+    letter-spacing: 2px;
+    color: rgb(55, 229, 235);
+}
+
+.inputWeight{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.inputWeight p{
+    font-size: 22px;
+    color: rgb(145, 228, 231);
+    font-weight: bold;
+}
+
+.inputWeight input{
+    padding: 10px 10px;
+    width: 400px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, .4) inset;
+}
+
+.converter span{
+    display: block;
+    margin-top: 20px;
+    padding: 20px;
+    font-size: 22px;
+    color: rgb(145, 228, 231);
+}
