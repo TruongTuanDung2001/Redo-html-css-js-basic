@@ -1,0 +1,35 @@
+const formEl = document.querySelector(".form");
+
+const inputEl = document.querySelector(".input");
+
+const ulEl = document.querySelector(".list");
+//
+formEl.addEventListener("submit", (e) => {
+    e.preventDefault();
+    toDoList();
+})
+
+function toDoList(){
+    if(inputEl.value !== ""){
+        let newTask = inputEl.value;
+
+        const liEl = document.createElement("li");
+        liEl.innerText = newTask;
+        ulEl.appendChild(liEl);
+
+        inputEl.value = "";
+
+        const checkBtnEl = document.createElement("div");
+        checkBtnEl.innerHTML = `
+            <i class="fa-solid fa-square-check"></i>
+        `
+        liEl.appendChild(checkBtnEl);
+
+        const trashBtnEl = document.createElement("div");
+        trashBtnEl.innerHTML = `
+            <i class="fa-solid fa-trash"></i>
+        `
+        liEl.appendChild(trashBtnEl);
+    }
+}
+
