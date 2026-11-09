@@ -40,6 +40,13 @@ img{
     transform: scale(.95);
 }
 
+
+.container .btn:disabled{
+    background-color: gray;
+    cursor: not-allowed;
+    transform: scale(1);
+}
+
 .anime-container{
     margin: 10px 0;
 }
