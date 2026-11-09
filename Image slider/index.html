@@ -5,9 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Image Slider</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
 </head>
 <body>
-    
+    <!-- Sử dụng hình ảnh: https://picsum.photos/ 
+        - Có thể thay đổi kích thước bằng thay đổi id hoặc số trên url  
+    -->
+    <div class="slider-container">
+        <div class="image-container">
+            <img src="https://picsum.photos/id/237/200/300" alt="image">
+            <img src="https://picsum.photos/id/1/200/300" alt="image">
+            <img src="https://picsum.photos/id/10/200/300" alt="image">
+            <img src="https://picsum.photos/id/30/200/300" alt="image">
+        </div>
+        <i class="fa-solid fa-angles-left btn prev"></i>
+        <i class="fa-solid fa-angles-right btn next"></i>
+    </div>
 
     <!--  -->
     <script src="script.js"></script>
