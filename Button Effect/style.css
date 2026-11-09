@@ -31,8 +31,10 @@ a{
     width: 0px;
     height: 0px;
     /* Hiện tại khi hover thì nó sẽ chạy từ vị trí trung tâm top và left nên muốn chạy theo chuột hover thì js phải thay đổi top và left */
-    left: 50%;
-    top: 50%;
+
+    /* vì nó là lớp before nên không thể gán style trực tiếp được nên phải dùng var */
+    left: var(--xPos);
+    top: var(--yPos);
     transform: translate(-50%, -50%);
     border-radius: 50%;
     /*  */
@@ -42,4 +44,9 @@ a{
 .button:hover::before{
     width: 200px;
     height: 200px;
+}
+
+.button span{
+    position: relative;
+    z-index: 1;
 }
