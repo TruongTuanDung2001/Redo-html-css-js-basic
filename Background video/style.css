@@ -26,3 +26,13 @@ header{
     display: grid;
     place-items: center;
 }
+
+button {
+    cursor: pointer;
+    padding: 10px 20px;
+    background: red;
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+}
