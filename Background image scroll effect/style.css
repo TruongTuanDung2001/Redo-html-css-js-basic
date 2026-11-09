@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* link ảnh: https://unsplash.com/wallpapers */
+.bg-image{
+    width: 100%;
+    height: 100vh;
+    background: url("https://images.unsplash.com/photo-1542856809-e1230214be24?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 110%;
+    /* background-repeat: no-repeat; */
+}
+
+.container{
+    padding: 100px;
+}
+
+h1{
+    font-style: 50px;
+}
+
+p{
+    color: grey;
+}
+
+@media (max-width: 500px){
+    .container{
+        padding: 10px;
+    }
+}
