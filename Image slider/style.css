@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: goldenrod;
+}
+
+.slider-container{
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .7);
+    position: relative;
+}
+
+.image-container{
+    display: flex;
+    /* transform: translateX(-500px); */
+}
+
+.btn{
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 20px;
+    opacity: .6;
+}
+
+.prev{
+    left: 10px;
+}
+
+.next{
+    right: 10px;
+}
+
+.btn:hover{
+    opacity: 1;
+}
