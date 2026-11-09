@@ -36,3 +36,15 @@ button {
     border: none;
     border-radius: 6px;
 }
+
+.preloader{
+    position: fixed;
+    inset: 0;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    z-index: 1;
+    transition: .3s linear;
+    background-color: #fff;
+}
