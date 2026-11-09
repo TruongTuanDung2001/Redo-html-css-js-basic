@@ -1,0 +1,45 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: brown;
+}
+
+a{
+    background-color: pink;
+    font-size: 30px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    padding: 20px 40px;
+    border-radius: 6px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, .6);
+    color: #000;
+    /*  */
+    position: relative;
+    overflow: hidden;
+}
+
+.button::before{
+    content: "";
+    position: absolute;
+    background: rebeccapurple;
+    width: 0px;
+    height: 0px;
+    /* Hiện tại khi hover thì nó sẽ chạy từ vị trí trung tâm top và left nên muốn chạy theo chuột hover thì js phải thay đổi top và left */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    /*  */
+    transition: width .5s, height .5s;
+}
+
+.button:hover::before{
+    width: 200px;
+    height: 200px;
+}
